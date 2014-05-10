@@ -11,18 +11,18 @@
 window.onload = function(){
 
   myBodyId.ontouchstart = function(event){
-   getElementById('myOutput').innerHTML = "touchstart, "    //clears the old ones
+  myOutput.innerHTML = "touchstart, "    //clears the old ones
   }
 
   myBodyId.ontouchmove = function(event){
-    getElementById('myOutput').innerHTML += "touchmove, "
+    myOutput.innerHTML += "touchmove, "
   }
 
   myBodyId.ontouchend = function(event){
-   getElementById('myOutput').innerHTML += "touchend, "
+   myOutput.innerHTML += "touchend, "
   }
 
-
+/*
   myBodyId.onmousedown = function(event){
     getElementById('myOutput').innerHTML += "mousedown, "
   }
@@ -34,14 +34,14 @@ window.onload = function(){
   myBodyId.onmousemove = function(event){
     getElementById('myOutput').innerHTML += "mousemove, "
   }
-
+*/
 }
 </script>
 
 </head>
 
 <body id="myBodyId" >
-wow2
+wow 3
 asdfsd<br>
 
 
