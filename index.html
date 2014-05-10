@@ -11,28 +11,28 @@
 window.onload = function(){
 
   myBodyId.ontouchstart = function(event){
-   getElementById('myBodyId').innerHTML = "touchstart, "    //clears the old ones
+   getElementById('myOutput').innerHTML = "touchstart, "    //clears the old ones
   }
 
   myBodyId.ontouchmove = function(event){
-    getElementById('myBodyId').innerHTML += "touchmove, "
+    getElementById('myOutput').innerHTML += "touchmove, "
   }
 
   myBodyId.ontouchend = function(event){
-   getElementById('myBodyId').innerHTML += "touchend, "
+   getElementById('myOutput').innerHTML += "touchend, "
   }
 
 
   myBodyId.onmousedown = function(event){
-    getElementById('myBodyId').innerHTML += "mousedown, "
+    getElementById('myOutput').innerHTML += "mousedown, "
   }
 
   myBodyId.onmouseup = function(event){
-    getElementById('myBodyId').innerHTML += "mouseup, "
+    getElementById('myOutput').innerHTML += "mouseup, "
   }
 
   myBodyId.onmousemove = function(event){
-    getElementById('myBodyId').innerHTML += "mousemove, "
+    getElementById('myOutput').innerHTML += "mousemove, "
   }
 
 }
@@ -41,8 +41,15 @@ window.onload = function(){
 </head>
 
 <body id="myBodyId" >
-wow
+wow2
 asdfsd<br>
+
+
+
+
+<div id="myOutput">touch stuff goes here</div>
+
+
 asdfsd<br>
 asdfsd<br>
 asdfsd<br>
@@ -57,7 +64,6 @@ asdfsd<br>
 asdfsd<br>
 asdfsd<br>
 asdfsd<br>
-<div id="myOutput"></div>
 
 asdfsd<br>
 asdfsd<br>
