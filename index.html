@@ -5,38 +5,34 @@
 
 <script type="text/javascript">
 
-function print_event(name, event){
-  s = "<p><b><i>"+name+"</i></b>"
-  output.innerHTML += s;
-}
 
 
 
 window.onload = function(){
 
-  box.ontouchstart = function(event){
-    print_event("touchstart", event);
+  myBodyId.ontouchstart = function(event){
+   getElementById('myBodyId').innerHTML = "touchstart, "    //clears the old ones
   }
 
-  box.ontouchmove = function(event){
-    print_event("touchmove", event);
+  myBodyId.ontouchmove = function(event){
+    getElementById('myBodyId').innerHTML += "touchmove, "
   }
 
-  box.ontouchend = function(event){
-    print_event("touchend", event);
+  myBodyId.ontouchend = function(event){
+   getElementById('myBodyId').innerHTML += "touchend, "
   }
 
 
-  box.onmousedown = function(event){
-    print_event("mousedown", event);
+  myBodyId.onmousedown = function(event){
+    getElementById('myBodyId').innerHTML += "mousedown, "
   }
 
-  box.onmouseup = function(event){
-    print_event("mouseup", event);
+  myBodyId.onmouseup = function(event){
+    getElementById('myBodyId').innerHTML += "mouseup, "
   }
 
-  box.onmousemove = function(event){
-    print_event("mousemove", event);
+  myBodyId.onmousemove = function(event){
+    getElementById('myBodyId').innerHTML += "mousemove, "
   }
 
 }
@@ -44,7 +40,7 @@ window.onload = function(){
 
 </head>
 
-<body id="box" >
+<body id="myBodyId" >
 
 asdfsd<br>
 asdfsd<br>
@@ -61,7 +57,7 @@ asdfsd<br>
 asdfsd<br>
 asdfsd<br>
 asdfsd<br>
-<div id="output"></div>
+<div id="myOutput"></div>
 
 asdfsd<br>
 asdfsd<br>
