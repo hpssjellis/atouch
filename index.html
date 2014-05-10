@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<script type="text/javascript">
+
+
+
+
+window.onload = function(){
+
+
+
+// basic touch events
+
+
+  myBodyId.ontouchstart = function(event){
+  myOutput.innerHTML = "touchstart, "    //clears the old ones
+  }
+
+  myBodyId.ontouchmove = function(event){
+    myOutput.innerHTML += "touchmove, "
+  }
+
+  myBodyId.ontouchend = function(event){
+   myOutput.innerHTML += "touchend, "
+  }
+
+
+
+// basic mouse events
+
+
+  myBodyId.onmousedown = function(event){
+    myOutput.innerHTML += "mousedown, "
+  }
+
+  myBodyId.onmouseup = function(event){
+    myOutput.innerHTML += "mouseup, "
+  }
+
+  myBodyId.onmousemove = function(event){
+    myOutput.innerHTML += "mousemove, "
+  }
+
+
+
+// complex events
+
+
+
+  myBodyId.ongesturestart = function(event){
+    myOutput.innerHTML += "gesturestart, "
+  }
+
+
+
+
+
+
+}
+</script>
+
+</head>
+
+<body id="myBodyId" >
+wow 4
+asdfsd<br>
+
+
+
+
+<div id="myOutput">touch stuff goes here</div>
+
+
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+<div style="background: black; height: 300px; width: 300px"></div>
+
+
+
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+asdfsd<br>
+</body>
+
+
+</html>
