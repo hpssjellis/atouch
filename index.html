@@ -1,8 +1,20 @@
 <script>
 
-var getPointerEvent = function(event) {
-    return event.originalEvent.targetTouches ? event.originalEvent.targetTouches[0] : event;
-};
+// helpers
+var $ = document.querySelector.bind(document),
+    $$ = document.querySelectorAll.bind(document),
+    getPointerEvent = function(event) {
+        return event.targetTouches ? event.targetTouches[0] : event;
+    },
+    
+    setListener = function (elm,events,callback) {
+        var eventsArray = events.split(' '),
+            i = eventsArray.length;
+        while(i--){
+            elm.addEventListener( eventsArray[i], callback, false );
+        }
+    };
+
 var $touchArea = $('#touchArea'),
     touchStarted = false, // detect if a touch event is sarted
     currX = 0,
@@ -11,7 +23,7 @@ var $touchArea = $('#touchArea'),
     cachedY = 0;
 
 //setting the events listeners
-$touchArea.on('touchstart mousedown',function (e){
+setListener($touchArea,'touchstart mousedown',function (e){
     e.preventDefault(); 
     var pointer = getPointerEvent(e);
     // caching the current x
@@ -20,29 +32,30 @@ $touchArea.on('touchstart mousedown',function (e){
     cachedY = currY = pointer.pageY;
     // a touch event is detected      
     touchStarted = true;
-    $touchArea.text('Touchstarted');
+    $touchArea.innerHTML = 'Touchstarted';
+  
     // detecting if after 200ms the finger is still in the same position
     setTimeout(function (){
         if ((cachedX === currX) && !touchStarted && (cachedY === currY)) {
             // Here you get the Tap event
-            $touchArea.text('Tap');
+            $touchArea.innerHTML = 'Tap';
         }
     },200);
 });
-$touchArea.on('touchend mouseup touchcancel',function (e){
+setListener($touchArea,'touchend mouseup touchcancel',function (e){
     e.preventDefault();
     // here we can consider finished the touch event
     touchStarted = false;
-    $touchArea.text('Touchended');
+    $touchArea.innerHTML = 'Touchended';
 });
-$touchArea.on('touchmove mousemove',function (e){
+setListener($touchArea,'touchmove mousemove',function (e){
     e.preventDefault();
     var pointer = getPointerEvent(e);
     currX = pointer.pageX;
     currY = pointer.pageY;
     if(touchStarted) {
          // here you are swiping
-         $touchArea.text('Swiping');
+         $touchArea.innerHTML = 'Swiping';
     }
    
 });
