@@ -16,11 +16,18 @@ window.onload = function(){
 
 
   myBodyId.ontouchstart = function(event){
-  myOutput.innerHTML = "touchstart, "    //clears the old ones
-  }
+    
+    myTouchObject = event.changedTouches[0]
+    document.myStartX = parseInt(myTouchObject.clientX)    // global variable
+    myOutput.innerHTML = "touchstart, "    //clears the old ones
+ }
 
   myBodyId.ontouchmove = function(event){
-    myOutput.innerHTML += "touchmove, "
+    
+    myTouchObject = event.changedTouches[0]
+    myNextX = parseInt(myTouchObject.clientX)
+    myChangeX = myNextX - document.myStartX
+    myOutput.innerHTML += "x-distance = "+myChangeX+ ", "
   }
 
   myBodyId.ontouchend = function(event){
@@ -43,6 +50,9 @@ window.onload = function(){
   myBodyId.onmousemove = function(event){
     myOutput.innerHTML += "mousemove, "
   }
+
+
+
 
 
 
@@ -98,3 +108,13 @@ asdfsd<br>
 
 
 </html>
+
+
+
+next stuff
+
+
+  var touchobj = e.changedTouches[0] // reference <span class="n5xi788hzjv6" id="n5xi788hzjv6_2">first touch</span> point (ie: first finger)
+  startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser
+  statusdiv.innerHTML = 'Status: touchstart<br /> ClientX: ' + startx + 'px'
+
