@@ -7,8 +7,17 @@ jsadhjadsf<br><br>
 jsadhjadsf<br><br>
 jsadhjadsf<br><br>
 jsadhjadsf<br><br>
+
+scale:<input type=text value=1.0 id="myScale">   
+
+
+TranslateX:<input type=text value=1.0 id="myGoX">
+
+
 <input type=button value=bigger onclick="{
-     document.getElementById('my1').style.webkitTransform = 'scale(1.2)';
+     document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
+     
+     document.getElementById('my1').style.webkitTransform = 'translateX('+document.all.myScale.value+'px)';
      
      
     
