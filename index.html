@@ -94,7 +94,7 @@ B:<input type=text value=-150 id="myB"><br>
 <input type=button value="auto on scale" id="myAuto1" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
      myAuto = 150*document.all.myScale.value - 150
-     document.getElementById('my2').style.webkitTransform = 'translateX('+myAuto+'px)';
+     document.getElementById('my2').style.webkitTransform = 'translate('+myAuto+'px,'+myAuto+'px)';
      
      
 }">
@@ -122,7 +122,7 @@ B:<input type=text value=-150 id="myB"><br>
 <input type=button value=redo id="myRedo" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale(1.0)';
      
-     document.getElementById('my2').style.webkitTransform = 'translateX(0px)';
+     document.getElementById('my2').style.webkitTransform = 'translate(0px,0px)';
      
      
 }">
