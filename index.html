@@ -12,16 +12,16 @@ jsadhjadsf<br><br>
 jsadhjadsf<br><br>
 jsadhjadsf<br><br>
 
-scale:<input type=text value=1.0 id="myScale">   
+scale:<input type=text value=1.0 id="myScale">  <br> 
 
 
-TranslateX:<input type=text value=1.0 id="myGoX">
+TranslateX:<input type=text value=1.0 id="myGoX"><br>
 
 
 
-slope:<input type=text value=1.0 id="mySlope">
+slope:<input type=text value=1.0 id="mySlope"><br>
 
-B:<input type=text value=1.0 id="myB
+B:<input type=text value=1.0 id="myB"><br>
 
 
 <input type=button value=bigger onclick="{
@@ -33,7 +33,7 @@ B:<input type=text value=1.0 id="myB
 }">
 
 
-<input type=button value="auto on scale onclick="{
+<input type=button value="auto on scale" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
      myAuto = 200*document.all.myScale.value - 300
      document.getElementById('my2').style.webkitTransform = 'translateX('+document.all.myGoX.value+'px)';
@@ -42,7 +42,7 @@ B:<input type=text value=1.0 id="myB
 }">
 
 
-<input type=button value="Sortof auto on scale onclick="{
+<input type=button value="Sortof auto on scale" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
      myAuto = document.all.mySlope.value*document.all.myScale.value - document.all.myB.value
      document.getElementById('my2').style.webkitTransform = 'translateX('+document.all.myGoX.value+'px)';
