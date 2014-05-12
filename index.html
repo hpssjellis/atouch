@@ -77,9 +77,9 @@ TranslateX:<input type=text value=1.0 id="myGoX"><br>
 
 
 
-slope:<input type=text value=1.0 id="mySlope"><br>
+slope:<input type=text value=150 id="mySlope"><br>
 
-B:<input type=text value=1.0 id="myB"><br>
+B:<input type=text value=-150 id="myB"><br>
 
 
 <input type=button value=bigger onclick="{
@@ -93,7 +93,7 @@ B:<input type=text value=1.0 id="myB"><br>
 
 <input type=button value="auto on scale" id="myAuto1" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
-     myAuto = 200*document.all.myScale.value - 200
+     myAuto = 150*document.all.myScale.value - 150
      document.getElementById('my2').style.webkitTransform = 'translateX('+myAuto+'px)';
      
      
@@ -102,7 +102,7 @@ B:<input type=text value=1.0 id="myB"><br>
 
 <input type=button value="Sortof auto on scale" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
-     myAuto = document.all.mySlope.value*document.all.myScale.value - document.all.myB.value
+     myAuto = document.all.mySlope.value*document.all.myScale.value + document.all.myB.value
      document.getElementById('my2').style.webkitTransform = 'translateX('+myAuto+'px)';
      
      
