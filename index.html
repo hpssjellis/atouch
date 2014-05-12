@@ -18,6 +18,12 @@ scale:<input type=text value=1.0 id="myScale">
 TranslateX:<input type=text value=1.0 id="myGoX">
 
 
+
+slope:<input type=text value=1.0 id="mySlope">
+
+B:<input type=text value=1.0 id="myB
+
+
 <input type=button value=bigger onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
      
@@ -26,6 +32,23 @@ TranslateX:<input type=text value=1.0 id="myGoX">
      
 }">
 
+
+<input type=button value="auto on scale"" onclick="{
+     document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
+     myAuto = 200*document.all.myScale.value - 300
+     document.getElementById('my2').style.webkitTransform = 'translateX('+document.all.myGoX.value+'px)';
+     
+     
+}">
+
+
+<input type=button value="auto on scale"" onclick="{
+     document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
+     myAuto = 200*document.all.myScale.value - 300
+     document.getElementById('my2').style.webkitTransform = 'translateX('+document.all.myGoX.value+'px)';
+     
+     
+}">
 
 
 
