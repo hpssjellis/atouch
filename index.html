@@ -36,7 +36,7 @@ B:<input type=text value=1.0 id="myB"><br>
 <input type=button value="auto on scale" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
      myAuto = 200*document.all.myScale.value - 300
-     document.getElementById('my2').style.webkitTransform = 'translateX('+document.all.myGoX.value+'px)';
+     document.getElementById('my2').style.webkitTransform = 'translateX('+myAuto+'px)';
      
      
 }">
@@ -45,7 +45,7 @@ B:<input type=text value=1.0 id="myB"><br>
 <input type=button value="Sortof auto on scale" onclick="{
      document.getElementById('my1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
      myAuto = document.all.mySlope.value*document.all.myScale.value - document.all.myB.value
-     document.getElementById('my2').style.webkitTransform = 'translateX('+document.all.myGoX.value+'px)';
+     document.getElementById('my2').style.webkitTransform = 'translateX('+myAuto+'px)';
      
      
 }">
