@@ -16,19 +16,19 @@ window.onload = function(){
 
 
   myBodyId.ontouchstart = function(event){
-    
-    myFinger0 = event.changedTouches[0]
-    myFinger1 = event.changedTouches[1]
+       myOutput.innerHTML = "touchstart, "
+    myFinger0 = event.Touches[0]
+    myFinger1 = event.Touches[1]
     document.myStartDist = parseInt(myFinger0.clientX)  - parseInt(myFinger1.clientX)    // global variable
-    myOutput.innerHTML = "touchstart, " +document.myStartDist+ ", "   //clears the old ones
+    myOutput.innerHTML +=  +document.myStartDist+ ", "   //clears the old ones
  }
 
   myBodyId.ontouchmove = function(event){
     
-    myFinger0 = event.changedTouches[0]
-    myFinger1 = event.changedTouches[1]
+    myFinger0 = event.Touches[0]
+    myFinger1 = event.Touches[1]
     myNewWidth = parseInt(myFinger0.clientX) - parseInt(myFinger1.clientX)   
-    myChangeX =  document.myStartDist / myNewWidth
+    myChangeX =  myNewWidth / document.myStartDist  
     myOutput.innerHTML += "x-distance = "+myChangeX+ ", "
     document.all.myScale.value = myChangeX
   }
