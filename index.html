@@ -1,4 +1,55 @@
-<body >
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<script type="text/javascript">
+
+
+
+
+window.onload = function(){
+
+
+
+// basic touch events
+
+
+  myBodyId.ontouchstart = function(event){
+    
+    myFinger0 = event.changedTouches[0]
+    myFinger1 = event.changedTouches[1]
+    document.myStartDist = parseInt(myFinger0.clientX)  - parseInt(myFinger1.clientX)    // global variable
+    myOutput.innerHTML = "touchstart, " +document.myStartDist+ ", "   //clears the old ones
+ }
+
+  myBodyId.ontouchmove = function(event){
+    
+    myFinger0 = event.changedTouches[0]
+    myFinger1 = event.changedTouches[1]
+    myNewWidth = parseInt(myFinger0.clientX) - parseInt(myFinger1.clientX)   
+    myChangeX =  document.myStartDist / myNewWidth
+    myOutput.innerHTML += "x-distance = "+myChangeX+ ", "
+    document.all.myScale.value = myChangeX
+  }
+
+  myBodyId.ontouchend = function(event){
+   myOutput.innerHTML += "touchend, "
+  }
+
+
+
+
+
+
+
+
+}
+</script>
+
+</head>
+
+<body id="myBodyId" >
 <div id="my1">
 <div id="my2">
 
@@ -71,6 +122,7 @@ B:<input type=text value=1.0 id="myB"><br>
 
 
 jsadhjadsf<br><br>
+<div id="myOutput">touch stuff goes here</div>
 jsadhjadsf<br><br>
 jsadhjadsf<br><br>
 jsadhjadsf<br><br>
